@@ -228,7 +228,7 @@ namespace UnityEngine.UI
         /// </code>
         /// </example>
 
-        public bool isOn
+        public virtual bool isOn
         {
             get { return m_IsOn; }
 
@@ -247,7 +247,7 @@ namespace UnityEngine.UI
             Set(value, false);
         }
 
-        void Set(bool value, bool sendCallback = true)
+        protected virtual void Set(bool value, bool sendCallback = true)
         {
             if (m_IsOn == value)
                 return;
